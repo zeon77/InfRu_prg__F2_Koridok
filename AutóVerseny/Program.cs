@@ -9,7 +9,14 @@ namespace AutóVerseny
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            //2. feladat: beolvasás
+            List<Versenyző> versenyzők = new List<Versenyző>();
+            foreach (var sor in File.ReadAllLines(@"autoverseny.csv").Skip(1))
+                versenyzők.Add(new Versenyző(sor));
+
+            //3. feladat
+            Console.WriteLine($"3. feladat: {versenyzők.Count()}");
+
         }
     }
 }
