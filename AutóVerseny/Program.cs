@@ -17,6 +17,10 @@ namespace AutóVerseny
             //3. feladat
             Console.WriteLine($"3. feladat: {versenyzők.Count()}");
 
+            //4. feladat
+            Versenyző FF = versenyzők.Single(v => v.Név == "Fürge Ferenc" && v.Pálya == "Gran Prix Circuit" && v.Kör == 3);
+            Console.WriteLine($"4. feladat: {FF.Köridő.TotalSeconds} másodperc");
+
         }
     }
 }
